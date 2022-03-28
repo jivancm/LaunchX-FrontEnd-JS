@@ -45,7 +45,7 @@ const buscarPokemon = () => {
         );
 }
 
-const animateStats = (stats) => {
+const showStats = stats => {
     let avg = 0;
     let i = 0;
     for(let stat in stats){
@@ -62,6 +62,19 @@ const animateStats = (stats) => {
     document.getElementById('stat-average').style.bottom = Math.round((avg / maxStat) * 100 - 10).toString() + 'px';
 }
 
+const showTypes = types => {
+    if (typeof types != 'object') return false;
+    document.getElementById('types').innerHTML = '';
+    for (let i = 0; i < types.length ; i++){
+        let img = document.createElement('img');
+        img.src = `./img/type-${types[i]}.png`;
+        img.title = types[i].toUpperCase();
+        img.style.height = '40px';
+        img.alt = types[i];
+        document.getElementById('types').append(img);
+    }
+}
+
 const limpiar = () => {
     document.getElementById('pokemon').value = '';
     document.getElementById('picture-container').innerHTML = '';
@@ -69,6 +82,7 @@ const limpiar = () => {
     document.getElementById('average-value').innerHTML = '';
     document.querySelectorAll('div.stats > div[id^="stat-"]').forEach(elm => elm.style.height = '1px');
     document.querySelectorAll(".stat-value").forEach( elm => elm.innerHTML = '');
+    document.getElementById('types').innerHTML = '';
 }
 
 const publicar = pokemon => {
@@ -80,6 +94,7 @@ const publicar = pokemon => {
         img.className = "img"
         document.getElementById('picture-container').innerHTML = '';
         document.getElementById('picture-container').append(img);
-        animateStats(pokemon.stats);
+        showStats(pokemon.stats);
+        showTypes(pokemon.types);
     }
 }

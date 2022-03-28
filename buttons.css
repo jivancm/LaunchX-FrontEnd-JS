@@ -322,10 +322,18 @@ button:active{
     color: black
 }
 
-.average-value{
+#average-value{
     text-align: center;
 }
 
 .stat-value{
     font-weight: bold;
+}
+
+#types{
+    height: 40px;
+}
+
+#types img{
+    height: 40px;
 }
