@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PokeDex</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='buttons.css'>
+</head>
+<body>
+    <div class="pokedex">
+        <div class="top border bg">
+            <div class="circle blue"><div class="circle-black-border"><div class="circle-white-border"></div></div></div>
+            <div class="circle little red"><div class="circle-black-border"><div class="circle-white-border"></div></div></div>
+            <div class="circle little yellow"><div class="circle-black-border"><div class="circle-white-border"></div></div></div>
+            <div class="circle little green"><div class="circle-black-border"><div class="circle-white-border"></div></div></div>
+        </div>
+        <div class="fold">
+            <div class="top-fold">
+                <div class="left bg">
+                    <div class="start bg"></div>
+                    <div class="middle bg"><div></div></div>
+                    <div class="end bg"></div>
+                </div>
+                <div class="center bg"></div>
+                <div class="right">
+                    <div class="start bg"></div>
+                    <div class="middle"><div></div></div>
+                    <div class="end"></div>
+                </div>
+            </div>
+            <div class="main-fold bg">
+                <div class="left">
+                    <div class="screen">
+                        <div>
+                            <div class="top-circles">
+                                <div class="circle little white"><div class="circle-black-border"></div></div>
+                                <div class="circle little white"><div class="circle-black-border"></div></div>
+                            </div>
+                            <div class="picture" id="picture-container"></div>
+                            <div class="bottom-circles">
+                                <div class="circle little red"><div class="circle-black-border"></div></div>
+                                <div>
+                                    <div class="circle xlittle"><div class="circle-black-border"></div></div>
+                                    <div class="circle xlittle"><div class="circle-black-border"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="circle grey"><div class="circle-black-border"><div class="circle-white-border"></div></div></div>
+                        <div class="buttons">
+                            <div class="button red xlittle"></div>
+                            <div class="button green xlittle"></div>
+                            <div class="button green"></div>
+                        </div>
+                        <div class="cross">
+                            <div class="top-left"></div>
+                            <div class="btop"></div>
+                            <div class="top-right"></div>
+                            <div class="bleft"></div>
+                            <div class="center"><div class="circle little"></div></div>
+                            <div class="bright"></div>
+                            <div class="bottom-left"></div>
+                            <div class="bbottom"></div>
+                            <div class="bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center"><div></div></div>
+                <div class="right">
+                    <div class="start"></div>
+                    <div class="middle">
+                        <input class="button grey" name="pokemon" id="pokemon" onkeydown="keyDown(event.key)">
+                        <div class="justify">
+                            <button class="button green" onclick="buscarPokemon()">Buscar</button>
+                            <button class="button yellow">Limpiar</button>
+                        </div>
+                        <div class="stats baseline">
+                            <div class="turquoise" id="stat-hp"><span>Puntos de Salud</span></div>
+                            <div class="blue" id="stat-attack"><span>Ataque</span></div>
+                            <div class="orange" id="stat-defense"><span>Defensa</span></div>
+                            <div class="yellow" id="stat-sattack"><span>Ataque Especial</span></div>
+                            <div class="green" id="stat-sdefense"><span>Defensa Especial</span></div>
+                            <div class="cyan" id="stat-speed"><span>Velocidad</span></div>
+                            <hr class="average" id="stat-average"/>
+                        </div>
+                        
+                        <div class="justify">
+                            <div class="button xlittle yellow"></div>
+                            <div class="button xlittle turquoise"></div>
+                        </div>
+                        <div class="justify">
+                            <div class="wrap around">
+                                <div class="button white medium"></div>
+                                <div class="button white medium"></div>
+                            </div>
+                            <div class="circle yellow"><div class="circle-black-border"><div class="circle-white-border"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="./main.js"></script>
+</footer>
+</html>

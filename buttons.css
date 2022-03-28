@@ -1,0 +1,323 @@
+.blue{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.yellow{
+    background-color: rgb(255, 208, 0);
+} 
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.turquoise{
+    background-color: turquoise;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.cyan{
+    background-color: darkcyan;
+}
+
+.white{
+    background-color: azure;
+}
+
+.grey{
+    background-color: #333;
+    color: white;
+}
+
+.button{
+    height: 40px;
+    width: 60px;
+    border-radius: 2px;
+    border-left: 3px solid rgba(255,255,255, 0.5);
+    border-top: 3px solid rgba(255,255,255, 0.5);
+    border-bottom: 3px solid rgba(0,0,0, 0.3);
+    border-right: 3px solid rgba(0,0,0, 0.3);
+}
+
+.circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin: 0 10px;
+}
+
+.white-border,
+.circle-white-border{
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-left: 4px rgba(255,255,255, 0.5) solid;
+    border-top: 4px rgba(255,255,255, 0.5) solid;
+    border-radius: 100%;
+}
+.black-border,
+.circle-black-border{
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-bottom: 3px rgba(0,0,0, 0.5) solid;
+    border-right: 3px rgba(0,0,0, 0.5) solid;
+    border-radius: 100%;
+}
+.white-border,
+.black-border{
+    border-radius: 0%;
+}
+
+.xlittle{
+    width: 25px;
+    height: 5px;
+}
+.little{
+    width: 15px;
+    height: 15px;
+}
+
+.medium{
+    width: 30px;
+    height: 30px;
+}
+
+.button.medium{
+    width: 40px;
+}
+
+.screen, 
+.screen > div{
+    width: 95%;
+    height: 50%;
+    background-color: #333;
+    clip-path: polygon(
+        0 0,
+        0 0,
+        100% 0,
+        100% 0,
+        100% 100%,
+        100% 100%,
+        10% 100%,
+        0% 80%,
+        0% 10%
+    );
+    position: relative;
+    left: 5px;
+}
+
+.screen > div{
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: white;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.screen > div > .top-circles{
+    display: flex;
+    justify-content: center;
+}
+
+.screen > div > .bottom-circles{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.screen > div > .picture{
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    background-color: #333;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 120px;
+    height: 187px;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cross{
+    width: 75px;
+}
+
+.cross > .top-left,
+.cross > .top-right,
+.cross > .bottom-left,
+.cross > .bottom-right{
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+}
+
+
+.cross > .btop,
+.cross > .bleft,
+.cross > .bright,
+.cross > .bbottom,
+.cross > .center{
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 3px solid #333;
+    background-color: #555;
+}
+.cross > .btop{
+    border-bottom: none;
+}
+.cross > .bleft {
+    border-right: none;
+}
+.cross > .bright{
+    border-left: none;
+}
+.cross > .bbottom{
+    border-top: none;
+}
+.cross > .center{
+    border: 3px solid #555;
+    border-radius: 0;
+}
+
+.controls > .buttons{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.controls > .cross{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cross > .center > .circle{
+    width: 10px;
+    height: 10px;
+    margin: auto;
+}
+
+input {
+    width: 95% !important;
+    padding: 0 10px;
+}
+
+.justify{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.around{
+    display: flex;
+    align-content: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 5px 5px 3px rgba(255, 255, 255,0.5) ;
+}
+
+button:active{
+    box-shadow: 3px 3px 2px rgba(255, 255, 255,0.3) ;
+}
+
+.circle,
+.button{
+    transition-duration: 0.5s;
+}
+
+.circle:hover,
+.button:hover{
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.wrap > .button {
+    cursor: pointer;
+}
+.wrap > .button.active{
+    background-color: aqua;
+}
+
+.stats{
+    height: 100px;
+    position: relative;
+}
+.baseline{
+    display: flex;
+    align-items: flex-end;
+}
+
+.stats > div{
+    text-align: center;
+    position: relative;
+    transition: 0.4s;
+    width: 30px;
+    min-height: 1px;
+    transition: 0.6s;
+}
+
+.stats > div:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.stats > div:hover > span{
+    display: block;
+}
+.stats > .average{
+    width: calc(100% + 40px);
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+    transition: 0.9s;
+}
+
+.stats > div > span{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top: 20px;
+    left: 20px;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 4px solid grey;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+    color: black
+}
