@@ -50,26 +50,25 @@ const animateStats = (stats) => {
     let i = 0;
     for(let stat in stats){
         let p100Val =  Math.round((parseInt(stats[stat]) / maxStat) * 100);
-        avg += p100Val;
+        avg += parseInt(stats[stat]);
         document.getElementById(`stat-${stat}`).style.height = p100Val.toString() + 'px';
+        console.log(`#stat-${stat} .stat-value`);
+        console.log(document.querySelector(`#stat-${stat} .stat-value`));
+        document.querySelector(`#stat-${stat} .stat-value`).innerHTML = stats[stat];
         i++;
     }
     avg = Math.round(avg / i);
-    document.getElementById('stat-average').style.bottom = (avg-10).toString() + 'px';
+    document.getElementById('average-value').innerHTML = avg;
+    document.getElementById('stat-average').style.bottom = Math.round((avg / maxStat) * 100 - 10).toString() + 'px';
 }
 
 const limpiar = () => {
-    animateStats({
-        hp : 1,
-        attack: 1,
-        defense: 1, 
-        sattack: 1,
-        sdefense:1,
-        speed : 1
-    });
     document.getElementById('pokemon').value = '';
     document.getElementById('picture-container').innerHTML = '';
     document.getElementById('stat-average').style.bottom = '-10px';
+    document.getElementById('average-value').innerHTML = '';
+    document.querySelectorAll('div.stats > div[id^="stat-"]').forEach(elm => elm.style.height = '1px');
+    document.querySelectorAll(".stat-value").forEach( elm => elm.innerHTML = '');
 }
 
 const publicar = pokemon => {

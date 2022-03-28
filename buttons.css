@@ -315,9 +315,17 @@ button:active{
     top: 20px;
     left: 20px;
     font-size: 10px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px solid grey;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 1);
     display: none;
     color: black
+}
+
+.average-value{
+    text-align: center;
+}
+
+.stat-value{
+    font-weight: bold;
 }
